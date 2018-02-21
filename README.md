@@ -1,6 +1,6 @@
 ## Simple Google Doodles CORS-Enabled `node.js` & `ExpressJS` Proxy Server
 
-This is a simple google doodles proxy server that was motivated by the `No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.` error.
+It all started when I kept getting the `No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.` error and the workaround didn't seem interesting to me.
 
 When I made the [Today in Google Doodles history](https://jonly03.github.io/today-in-google-doodles-history/), I was making `ajax` requests to the `https://www.google.com/doodles/json/:year/:month` Google API. 
 
