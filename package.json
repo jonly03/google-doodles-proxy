@@ -1,0 +1,17 @@
+{
+  "name": "google_doodle_proxy_server",
+  "version": "1.0.0",
+  "description": "Proxy server for Google Doodles request",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-fetch": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nelly Sugu",
+  "license": "ISC"
+}
