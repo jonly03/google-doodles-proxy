@@ -2,7 +2,7 @@
 
 This is a simple google doodles proxy server that was motivated by the `No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.` error.
 
-When I made the # [Today in Google Doodles history](https://jonly03.github.io/today-in-google-doodles-history/), I was making requests to the `https://www.google.com/doodles/json/:year/:month` Google API. 
+When I made the [Today in Google Doodles history](https://jonly03.github.io/today-in-google-doodles-history/), I was making requests to the `https://www.google.com/doodles/json/:year/:month` Google API. 
 
 After observing the networks requests that `https://www.google.com/doodles` makes to fetch their doodles, I figured out that that's where they were sending their requests. 
 
