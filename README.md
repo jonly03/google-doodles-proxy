@@ -1,4 +1,4 @@
-## Simple Google Doodles `node.js` & `ExpressJS` Proxy Server
+## Simple Google Doodles CORS-Enabled `node.js` & `ExpressJS` Proxy Server
 
 This is a simple google doodles proxy server that was motivated by the `No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.` error.
 
