@@ -16,8 +16,8 @@ app.use(function(req, res, next) {
 });
 
 app.get("/doodles/:year/:month", function(req, res){
-  if (!req.params.year || !req.params.month){
-    return res.send({status:400, msg:'Incomplete request /doodles/:year/:month expects both year and month'});
+  if (!Number(req.params.year) || !Number(req.params.month)){
+    return res.send({status:400, msg:'Incomplete request /doodles/:year/:month expects a valid year and month'});
   }
   
   fetch(`https://www.google.com/doodles/json/${req.params.year}/${req.params.month}`)
