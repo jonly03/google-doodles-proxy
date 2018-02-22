@@ -15,9 +15,10 @@ app.use(function(req, res, next) {
   next();
 });
 
+
 app.get("/doodles/:year/:month", function(req, res){
   if (!Number(req.params.year) || !Number(req.params.month)){
-    return res.send({status:400, msg:'Incomplete request /doodles/:year/:month expects a valid year and month'});
+    return res.send({status:400, msg:'Bad request /doodles/:year/:month expects a valid year and month'});
   }
   
   fetch(`https://www.google.com/doodles/json/${req.params.year}/${req.params.month}`)
@@ -26,6 +27,10 @@ app.get("/doodles/:year/:month", function(req, res){
       return res.send(json);
     })
   
+})
+
+app.get("*", function(req,res){
+  return res.send({status: 404, msg:'Route does not exist. Only route available is /doodles/:year/:month'});
 })
 
 app.listen(port, ip);
