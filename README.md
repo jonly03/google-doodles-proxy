@@ -2,7 +2,7 @@
 
 It all started when I kept getting the `No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.` error and the workaround didn't seem interesting to me.
 
-When I made the [Today in Google Doodles history](https://jonly03.github.io/today-in-google-doodles-history/), I was making `ajax` requests to the `https://www.google.com/doodles/json/:year/:month` Google API. 
+When I made the [Today in Google Doodles history](https://jonly03.github.io/Gooddlistory/), I was making `ajax` requests to the `https://www.google.com/doodles/json/:year/:month` Google API. 
 
 After observing the networks requests that `https://www.google.com/doodles` makes to fetch their doodles, I figured out that that's where they were sending their requests. 
 
@@ -20,7 +20,7 @@ I found this [MDN page](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 
 
 One way of getting around the CORS violation error (in Google Chrome) is adding [the Allow-Control-Allow-Origin: * extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) to Chrome and enabling it.
 
-But telling people to check out your new cool page and telling them to first install an extension was an overkill. So I just created a simple CORS-enabled `node.js` & `ExpressJS` proxy server `https://google-doodles.herokuapp.com` hosted on Heroku. My [Today in Google Doodles history](https://jonly03.github.io/today-in-google-doodles-history/) page sends its `GET` doodles requests to the proxy server via `/doodles/:year/:month` route. Then the proxy server makes `fetch` requests to the good 'ole `https://www.google.com/doodles/json/:year/:month` API and returns the result back to the client.
+But telling people to check out your new cool page and telling them to first install an extension was an overkill. So I just created a simple CORS-enabled `node.js` & `ExpressJS` proxy server `https://google-doodles.herokuapp.com` hosted on Heroku. My [Today in Google Doodles history](https://jonly03.github.io/Gooddlistory/) page sends its `GET` doodles requests to the proxy server via `/doodles/:year/:month` route. Then the proxy server makes `fetch` requests to the good 'ole `https://www.google.com/doodles/json/:year/:month` API and returns the result back to the client.
 
 I learned how to enable CORS on a `node.js` & `expressJS` server from [here](https://enable-cors.org/server_expressjs.html)
 
